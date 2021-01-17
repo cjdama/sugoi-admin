@@ -48,6 +48,7 @@ public function render()
 ```
 
 4.) Remove useless component
+
 	* resources
 		* views
 			* components
