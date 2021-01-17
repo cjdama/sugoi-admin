@@ -20,17 +20,20 @@
 
 ## Prerequisites 
 1.) Change git branch
+
 ```sh
 git checkout -b project-name-component-name
 ```
 
 2.) Make Layout Component
+
 ```sh
 php artisan make:component ProjectNameLayout
 ```
 
 
 3.)  Change render view name
+
 ```php
 /**
  * Get the view / contents that represent the component.
@@ -39,10 +42,10 @@ php artisan make:component ProjectNameLayout
  */
 public function render()
 {
-	  // Remove
+    // Remove
     // return view('components.project-name.layout');
 
-	  // Changed
+    // Changed
     return view('project-name.layout');
 }
 ```
