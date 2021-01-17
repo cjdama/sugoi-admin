@@ -18,9 +18,7 @@ Route::view('/', 'welcome');
 Route::get('/{project}/{page?}', function ($project, $page = null) {
     $view = $project . '.dashboard';
 
-    if ($page) $view = "{$project}.$page";
+    if ($page) $view = "{$project}.pages.$page";
 
-    abort_unless(view()->exists($view), 404);
-
-    return view($project . '.dashboard');
+    return view()->exists($view) ? $view : abort(404);
 });
