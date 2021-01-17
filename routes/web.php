@@ -14,3 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
+
+Route::get('/{project}/{page?}', function ($project, $page = null) {
+    $view = $project . '.dashboard';
+
+    if ($page) $view = "{$project}.$page";
+
+    abort_unless(view()->exists($view), 404);
+
+    return view($project . '.dashboard');
+});
