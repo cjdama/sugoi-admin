@@ -20,5 +20,5 @@ Route::get('/{project}/{page?}', function ($project, $page = null) {
 
     if ($page) $view = "{$project}.pages.$page";
 
-    return view()->exists($view) ? $view : abort(404);
+    return view()->exists($view) ? view($view) : abort(404);
 });
