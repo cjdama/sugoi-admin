@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 Route::get('/{project}/{page?}', function ($project, $page = null) {
-    $view = $project . '.dashboard';
+    $view = $project . '.index';
 
     if ($page) $view = "{$project}.pages.$page";
 
