@@ -1,0 +1,1 @@
+<x-sugoi-admin-layout></x-sugoi-admin-layout>
